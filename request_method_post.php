@@ -1,6 +1,6 @@
 <?php
  
-
+#index05.php
  if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['age']) && $_POST['age'] != ''){
         $age = (int) $_POST['age'];

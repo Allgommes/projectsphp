@@ -8,7 +8,7 @@
         <option value="Categoria A2">Categoria A2</option>
         <option value="Categoria A">Categoria A</option>
     </select><br>
-    <input type="submit" value="Verificar">
+    <input name= "" type="submit" value="Verificar">
 </form>
 
 <?php

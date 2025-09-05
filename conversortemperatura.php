@@ -1,4 +1,5 @@
 <?php
+#index04.php
     // Verifica se o formulário foi submetido
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Obtém o valor em Celsius do formulário
