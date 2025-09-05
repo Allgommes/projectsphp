@@ -1,10 +1,10 @@
 <?php
 #index04.php
     // Verifica se o formulário foi submetido
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Obtém o valor em Celsius do formulário
         $celsius = isset($_POST['celsius']) ? (float)$_POST['celsius'] : null;
-
+            
         // Realiza a conversão para Fahrenheit
         if ($celsius !== null) {
             $fahrenheit = ($celsius * 9/5) + 32;
