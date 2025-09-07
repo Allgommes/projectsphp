@@ -98,4 +98,46 @@ Ao seguir estes passos e dedicar tempo à prática e à experimentação, desenv
 
 git clone https://github.com/Allgommes/projectsphp.git
 
+# projectsphp
+
+## Atualizações
+
+### Instalação do PHPUnit
+
+Para instalar o PHPUnit no seu projeto:
+
+1. Execute o comando abaixo no terminal para instalar via Composer:
+  ```powershell
+  composer require --dev phpunit/phpunit
+  ```
+2. O PHPUnit será instalado na pasta `vendor/` do seu projeto.
+3. Para rodar os testes:
+  ```powershell
+  vendor\bin\phpunit
+  ```
+  Ou, se preferir, utilize o arquivo `tools/phpunit.phar` já presente no projeto:
+  ```powershell
+  php tools\phpunit.phar
+  ```
+
+### Extensão Laravel para VS Code
+
+Para facilitar o desenvolvimento com Laravel no VS Code:
+
+1. Abra o VS Code.
+2. Vá até a aba de extensões (Ctrl+Shift+X).
+3. Procure por **Laravel Extension Pack** ou **Laravel Snippets**.
+4. Clique em "Install" para instalar a extensão desejada.
+
+Essas extensões oferecem:
+- Snippets para comandos e estruturas do Laravel
+- Autocompletar para rotas, controllers, migrations, etc.
+- Integração com Artisan
+
+---
+
+> Para mais informações, consulte a [documentação oficial do PHPUnit](https://phpunit.de/getting-started/phpunit-10.html) e [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack).
+
+git clone https://github.com/Allgommes/projectsphp.git
+
 
