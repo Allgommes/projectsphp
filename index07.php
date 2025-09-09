@@ -18,9 +18,11 @@ email (texto)
     $PASSWORD = "";
     $DBNAME = "agenda";
 
-    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); //ativar erros do mysqli
+
     //connectar a base de dados
     $conn = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DBNAME);
+
     //teste de conexao
     if (!$conn) {
         die ("Conecção falhou: " . mysqli_connect_error());
@@ -29,14 +31,16 @@ email (texto)
         echo "Conectado com sucesso";
     }
     echo "<br>";
+
 /* create - inserir dados na tabela */
-    $query = "INSERT INTO contato (nome, contato, email) VALUES ('Alvaro', 'Portugal', 'teste@sapo.pt')"; //inserir dados na tabela
+    $query = "INSERT INTO contato (nome, contato, email) VALUES ('Alvaro', 'telemovel', 'teste@sapo.pt')"; //inserir dados na tabela
     if (mysqli_query($conn, $query)) { // if para verificar se a query foi executada com sucesso
         echo "Conexão realizada com sucesso";
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
     echo "<br>";
+
 // READ - ler dados na tabela
     $query = "SELECT * FROM contato"; 
     $result = mysqli_query($conn, $query);
@@ -48,8 +52,8 @@ email (texto)
         echo "Erro ao ler registos: " . mysqli_error($conn);
     }
     echo "<br>";
+
     // UPDATE - atualizar dados na tabela
-    
     $query = "UPDATE contato SET nome='PHP CODE' WHERE id=5";
     if (mysqli_query($conn, $query)) {
         echo "Registo atualizado com sucesso (nome)";
@@ -59,7 +63,9 @@ email (texto)
 echo "<br>";
     $query = "UPDATE contato SET email='estafuncionar@yahoo.com' WHERE id=10";
     if (mysqli_query($conn, $query)) {
-        echo "Registo atualizado com sucesso (email)";
+        if (mysqli_affected_rows($conn) > 0) {
+            echo "Registo atualizado com sucesso (email): ";
+        }
     } else {
         echo "Erro ao atualizar o registo (email): " . mysqli_error($conn);
     }
@@ -71,8 +77,9 @@ echo "<br>";
         echo "Erro ao atualizar registo (contato): " . mysqli_error($conn);
     }
 echo "<br>";
-    // apagar dados na tabela
-    $query = "DELETE FROM contato WHERE id=10";
+
+    // apagar dados na tabela 
+    $query = "DELETE FROM contato WHERE id=12";
     if (mysqli_query($conn, $query)) {
         echo "Registo apagado com sucesso";
     } else {
