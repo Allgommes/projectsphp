@@ -2,7 +2,7 @@
 
 include '../connection.php';
 
-$query = "UPDATE contato SET nome='Joao Silva', contato='987654321', email='joao.silva@example.com' WHERE id=1";
+$query = "UPDATE contato SET nome='Alvaro', contato='981212258', email='teste@example.com' WHERE id=1";
 
     if( mysqli_query($conn, $query) ) {
         if ( mysqli_affected_rows($conn) > 0 ) {

@@ -1,9 +1,8 @@
 <?php
-
     $HOSTNAME = "localhost";
     $USERNAME = "root";
     $PASSWORD = "";
-    $DBNAME = "agenda";
+    $DBNAME = "HotelDB";
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); //ativar erros do mysqli
 
@@ -13,6 +12,4 @@
     if (!$conn) {
         die("Falha na conexão: " . mysqli_connect_error());
     }
-
-
 ?>

@@ -12,6 +12,11 @@
 
     <?php include 'connection.php'; ?>
     <?php include 'crud/read.php'; ?>
+    <div class="container mt-4">
+        <a href="createform.php" class="btn btn-primary mb-3">
+            <i class="bi bi-plus"></i> Add New
+        </a>
+    </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
